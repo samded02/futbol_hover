@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol</title>
+    <style>
+        body{
+            background: url(field.jpg) top / cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .gapici{
+            height: 170px;
+            width: 250px;
+            background: url(gapici.png) center / cover;
+            position: absolute;
+            left: 800px;
+            top: 400px;
+            filter: drop-shadow(0 0 10px);
+            transition: 1s;
+            transform: rotate(-25deg);
+        }
+        .top{
+            height: 40px;
+            width: 40px;
+            background: url(top.png) center / cover;
+            position: absolute;
+            top: 530px;
+            left: 190px;
+            filter: drop-shadow(0 0 10px);
+            transition: 1s;
+        }
+        .futbolcu{
+            width: 200px;
+            height: 300px;
+            background: url(futbolcu.png) center / cover;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            filter: drop-shadow(0 0 10px);
+            transition: 1s;
+        }
+        .gapi{
+            width: 400px;
+            height: 300px;
+            background: url(gapi.png) center / cover;
+            position: absolute;
+            left: 900px;
+            top: 300px;
+            filter: drop-shadow(0 0 10px);
+        }
+        .futbolcu:hover{
+            transform: rotate(-25deg);
+        }
+        .futbolcu:hover~.gapici{
+            transform: rotate(30deg);
+            transform: translate(100px, -50px);
+        }
+        .futbolcu:hover~.top{
+            transform: translate(1000px, -200px);
+        }
+        .futbolcu:hover~.gool{
+            font-size: 100px;
+        }
+        .gool{
+            text-align: center;
+            color: white;
+            font-size: 0px;
+            width: 100%;
+            line-height: 500px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="futbolcu"></div>
+    <div class="top"></div>
+    <div class="gapi"></div>
+    <div class="gapici"></div>
+    <div class="gool">Goal</div>
+</body>
+</html>
